@@ -1,0 +1,36 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>
+    Feel Good Coffee </h1>
+      <div class='row' >
+        {% for allth in allth %}
+        <div class='col'style= 'justify-items: space-evenly; display: grid;
+        align-items: start;
+        
+        gap: 10px;'>
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{allth.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{allth.name}}</h5>
+                  <p class="card-text">${{ allth.price}}</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+        </div>
+       
+
+      {% endfor %}
+     
+      
+
+        {% comment %} <li>{{allth.name}} (${{ allth.price}}) </li>
+     {% endfor %}
+    </ul> {% endcomment %}
+
+    {% endblock %}
